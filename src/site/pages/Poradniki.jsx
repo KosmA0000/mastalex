@@ -293,6 +293,7 @@ export function WpisIleKosztuje() {
           ]} />
         <p>Najwięcej kosztują zwykle teksty. W sprawdzonych cennikach to od 100 zł za sekcję strony, 150–300 zł za stronę albo od 300 zł netto za podstronę. Przy 5 podstronach i cenie 150–300 zł za stronę dopłata wynosi 750–1500 zł.</p>
         <p>Płatne bywają też drobne dodatki. W jednym z cenników formularz kontaktowy kosztuje dodatkowo 300 zł, a możliwość samodzielnej zmiany treści 500 zł.</p>
+        <p>Planujesz później dodać kolejne podstrony? Sprawdź <a href="/cennik-stron-internetowych#rozbudowa">koszt rozbudowy strony w Mastalex</a>, żeby uwzględnić go w budżecie.</p>
         <p><strong>Wniosek:</strong> poproś o wycenę, która wymienia wszystko, co dostajesz. Jeśli czegoś w niej brakuje, zapytaj, czy to dopłata.</p>
 
         <h2 id="domena-i-hosting">Domena i hosting: ile kosztują co roku</h2>
@@ -305,7 +306,7 @@ export function WpisIleKosztuje() {
           <li><strong>Domena .pl:</strong> w pierwszym roku ok. 1–20 zł, w kolejnych latach ok. 70–220 zł rocznie.</li>
           <li><strong>Hosting małej strony:</strong> w pierwszym roku ok. 60–100 zł, w kolejnych latach ok. 160–310 zł rocznie.</li>
         </ul>
-        <p>Pierwszy rok jest wyraźnie tańszy niż kolejne. Sprawdź więc cenę za kolejne lata, bo to ją płacisz najdłużej.</p>
+        <p>Pierwszy rok jest wyraźnie tańszy niż kolejne. Sprawdź więc cenę za kolejne lata, bo to ją płacisz najdłużej. Zobacz też, <a href="/cennik-stron-internetowych#domena-i-hosting">jak dobieramy domenę i hosting do nowej strony</a>.</p>
 
         <h2 id="kiedy-placisz">Kiedy płacisz za stronę</h2>
         <p>Cenniki rzadko o tym piszą. Znaleźliśmy tylko 3, które opisują zaliczkę, i 2, w których projekt widać przed płatnością. Spotkaliśmy trzy sposoby:</p>
@@ -314,7 +315,7 @@ export function WpisIleKosztuje() {
           <li><strong>Mała zaliczka:</strong> 20% na start i 80% po akceptacji gotowej strony.</li>
           <li><strong>Bez zaliczki:</strong> najpierw widzisz projekt, potem decydujesz. W jednym z cenników projekt strony głównej jest gotowy po 2 dniach roboczych.</li>
         </ul>
-        <p><strong>Wniosek:</strong> najmniej ryzykujesz, gdy płacisz po zobaczeniu projektu. Jeśli firma chce zaliczki, zapytaj, co się z nią stanie, gdy projekt Ci się nie spodoba.</p>
+        <p><strong>Wniosek:</strong> najmniej ryzykujesz, gdy płacisz po zobaczeniu projektu. Jeśli firma chce zaliczki, zapytaj, co się z nią stanie, gdy projekt Ci się nie spodoba. Zobacz, <a href="/tworzenie-stron-internetowych#jak-powstaje">jak wygląda bezpłatny projekt przed płatnością</a> w Mastalex.</p>
 
         <h2 id="jak-czytac-cennik">Jak czytać cennik strony internetowej</h2>
         <p>Zanim porównasz dwie oferty, sprawdź w każdej te same rzeczy:</p>
@@ -626,6 +627,7 @@ export function WpisWyzejWGoogle() {
           <h2 id="zostaw-nam" className="mt-0 text-[26px] sm:text-[30px] font-bold leading-tight tracking-[-0.02em]">Kroki 6–8 zostaw nam</h2>
           <p className="mt-3 text-[17px] leading-[1.6] text-body">Poprawimy kod Twojej strony tak, żeby otwierała się od razu, a Google czytał każdą podstronę i znał dane Twojej firmy. Do tego zadbamy, żeby czaty AI polecały właśnie Ciebie.</p>
           <p className="mt-4 text-[30px] font-bold text-ink">od 300 zł</p>
+          <p className="mt-3 text-[17px] leading-[1.6] text-body">Ceny pozostałych usług sprawdzisz w <a href="/cennik-stron-internetowych#ceny-h" className="text-brand-deep underline underline-offset-4">cenniku usług Mastalex</a>.</p>
           <a href="/optymalizacja-seo" className="mt-3 inline-flex items-center gap-2 font-semibold text-brand-deep no-underline">Zobacz, co obejmuje optymalizacja SEO <span aria-hidden="true">→</span></a>
         </section>
 
