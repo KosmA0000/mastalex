@@ -149,6 +149,7 @@ export function Tworzenie() {
         <h2>Wizytówka czy strona z podstronami?</h2>
         <p>Wybierz, ile miejsca potrzebuje Twoja oferta.</p>
         <PriceCards items={plans} />
+        <p>Porównujesz oferty? Zobacz, <a href="/poradniki/ile-kosztuje-strona-internetowa#firmowa">ile kosztuje strona firmowa</a> i od czego zależy jej cena w przeanalizowanych cennikach.</p>
         <p>Potrzebujesz więcej niż 5 podstron? Każda kolejna kosztuje {AFTER.podstrona} zł. Domenę i hosting opłacasz osobno — ile kosztują, sprawdzisz w <a href="/cennik-stron-internetowych#domena-i-hosting">cenniku</a>.</p>
       </Body>
       <section className="mx-auto max-w-[1200px] px-4 sm:px-6 mt-16">
@@ -272,6 +273,7 @@ export function Przebudowa() {
 
         <h2>Ile kosztuje przebudowa strony</h2>
         <p>Przebudowa wizytówki kosztuje 400 zł, a strony firmowej do 5 podstron 1200 zł. To zawsze mniej niż nowa strona tej samej wielkości. Większą stronę wycenimy razem z projektem nowej wersji. Ceny wszystkich usług znajdziesz w <a href="/cennik-stron-internetowych">cenniku</a>.</p>
+        <p>W analizie cen pokazujemy też, <a href="/poradniki/ile-kosztuje-strona-internetowa#przebudowa">ile kosztuje przebudowa strony</a> w innych firmach i na co zwrócić uwagę przy porównywaniu zakresu prac.</p>
       </Body>
       <Process steps={STEPS_PRZEBUDOWA} title="Jak wygląda przebudowa" />
       <Faq items={[
@@ -310,6 +312,7 @@ export function Seo() {
         <p>Strona bez SEO jest jak sklep na zapleczu budynku: może mieć świetną ofertę, ale mało kto do niego trafia. SEO przenosi go na główną ulicę, którą klienci przechodzą codziennie.</p>
         <p>Coraz więcej osób prosi też o polecenie firmy czaty AI, np. ChatGPT. SEO sprawia, że Twoja firma częściej pojawia się również w ich odpowiedziach.</p>
         <p>Jeśli chcesz poczytać więcej, Google opisuje SEO w <a href={GOOGLE_SEO_STARTER} rel="noopener" target="_blank">poradniku dla początkujących</a> i wyjaśnia, <a href={GOOGLE_DO_I_NEED_SEO} rel="noopener" target="_blank">kiedy warto je zlecić</a>.</p>
+        <p>Od czego zacząć u siebie? W naszym poradniku wyjaśniamy, <a href="/poradniki/jak-byc-wyzej-w-google">jak poprawić widoczność firmy w Google krok po kroku</a>, także samodzielnie.</p>
 
         <h2>Co wykonujemy w ramach usługi</h2>
         <Numbered items={SEO_WORK} />
@@ -340,7 +343,7 @@ export function Cennik() {
       <section className="mx-auto max-w-[1200px] px-4 sm:px-6 mt-10" aria-labelledby="ceny-h">
         <h2 id="ceny-h" className="text-[28px] sm:text-[34px] leading-[1.1] font-bold tracking-[-0.02em]">Ceny usług</h2>
         <PriceCards items={PRICES} wide />
-        <p className="mt-6 max-w-[68ch] text-[16px] leading-[1.6] text-body">Dla porównania: w ponad połowie z {MARKET_WIZYTOWKA.cenniki} cenników innych firm, które sprawdziliśmy we wrześniu 2026, strona wizytówka kosztuje co najmniej {MARKET_WIZYTOWKA.prog}.</p>
+        <p className="mt-6 max-w-[68ch] text-[16px] leading-[1.6] text-body">Dla porównania: w ponad połowie z {MARKET_WIZYTOWKA.cenniki} cenników innych firm, które sprawdziliśmy we wrześniu 2026, strona wizytówka kosztuje co najmniej {MARKET_WIZYTOWKA.prog}. Pełne porównanie i opis zakresu ofert znajdziesz w naszej <a href="/poradniki/ile-kosztuje-strona-internetowa" className="text-brand-deep underline underline-offset-4">analizie cen stron internetowych w Polsce</a>.</p>
         {SHOP_ON && <>
           <h2 id="sklepy" className="mt-16 text-[28px] sm:text-[34px] leading-[1.1] font-bold tracking-[-0.02em]">Ceny sklepów internetowych</h2>
           <PriceCards items={SHOP.plans} />

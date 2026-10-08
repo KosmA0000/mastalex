@@ -1,8 +1,9 @@
 import { AUTORZY, EMAIL, ROUTES } from '../data.js'
 import { CtaBand, PageHero } from '../ui.jsx'
 import { CENNIKI_2026 } from '../zrodla-cen-2026.js'
+import RelatedGuides from './RelatedGuides.jsx'
 
-// Dział Poradniki. Zasada wpisów: każda liczba ma źródło z linkiem i datą odczytu, własny osąd
+// Dział Poradniki. Zasada wpisów: każda liczba ma źródło i datę odczytu, własny osąd
 // podajemy jako wniosek, a braki danych nazywamy wprost. Wpisy pisze Claude, publikacja za zgodą właściciela.
 
 const MIESIACE = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia']
@@ -105,6 +106,7 @@ function Wpis({ path, title, lead, toc, children }) {
         </div>
         <div className="hidden lg:block"><SpisTresci items={toc} /></div>
       </div>
+      <RelatedGuides path={path} />
     </article>
   )
 }
@@ -118,7 +120,7 @@ const zl = (n, mies) => (n ? `${n} zł${mies ? '/mies.' : ''}` : '—')
 function ListaCennikow() {
   return (
     <details className="not-prose mt-6">
-      <summary className="cursor-pointer text-[17px] font-semibold text-brand-deep underline underline-offset-4">Pokaż wszystkie {CENNIKI_2026.length} cenniki z cenami</summary>
+      <summary className="cursor-pointer text-[17px] font-semibold text-brand-deep underline underline-offset-4">Pokaż ceny ze wszystkich {CENNIKI_2026.length} przeanalizowanych cenników</summary>
       <div className="tabela" role="region" aria-label="Sprawdzone cenniki" tabIndex={0}>
         <table>
           <caption>Cena wejścia w każdym cenniku, sprawdzona 30 września 2026. Kreska oznacza, że cennik nie podaje ceny tej usługi.</caption>
@@ -126,7 +128,7 @@ function ListaCennikow() {
           <tbody>
             {CENNIKI_2026.map((c) => (
               <tr key={c.firma}>
-                <th scope="row"><a href={c.url} rel="nofollow noopener noreferrer" target="_blank">{c.firma}</a></th>
+                <th scope="row">{c.firma}</th>
                 {KOLUMNY.map(([k]) => <td key={k} className="liczba">{zl(c[k], k === 'a')}</td>)}
               </tr>
             ))}
@@ -278,6 +280,7 @@ export function WpisIleKosztuje() {
         <p><strong>Bez abonamentu.</strong> Połowa z 16 cenników mieści się w przedziale 1000–2000 zł. Cztery schodzą poniżej 1000 zł, a cztery przekraczają 2000 zł. W tej grupie są zarówno same audyty, czyli lista rzeczy do poprawy, jak i optymalizacja, w której firma od razu wprowadza poprawki. Zapytaj, co dokładnie obejmuje cena.</p>
         <p><strong>W abonamencie.</strong> W 8 z 12 cenników abonament kosztuje do 1000 zł miesięcznie. Przy środkowej cenie 700 zł miesięcznie rok abonamentu kosztuje 8400 zł.</p>
         <p><strong>Wniosek:</strong> abonament ma sens, gdy firma co miesiąc wykonuje przy stronie konkretne prace. Zanim go wybierzesz, zapytaj, co konkretnie dostajesz każdego miesiąca. Zobacz też, co obejmuje nasza <a href="/optymalizacja-seo">optymalizacja SEO</a>.</p>
+        <p>Przed wyborem zakresu prac sprawdź, <a href="/poradniki/jak-byc-wyzej-w-google">jak poprawić widoczność firmy w Google krok po kroku</a> i które działania możesz wykonać samodzielnie.</p>
 
         <h2 id="w-cenie">Co jest w cenie, a za co płacisz osobno</h2>
         <p>Znaleźliśmy 9 cenników, które wprost piszą, czy domena, hosting albo teksty są w cenie. Tak to wygląda:</p>
@@ -375,7 +378,7 @@ function Uczciwie({ children }) {
   return (
     <aside className="not-prose mt-6 rounded-[20px] bg-brand-soft p-5 sm:p-6">
       <p className="text-[17px] leading-[1.6] text-ink"><strong>Uczciwie:</strong> {children}</p>
-      <a href="/optymalizacja-seo" className="mt-3 inline-flex items-center gap-2 font-semibold text-brand-deep no-underline">Zrobimy to za Ciebie <span aria-hidden="true">→</span></a>
+      <a href="/optymalizacja-seo" className="mt-3 inline-flex items-center gap-2 font-semibold text-brand-deep no-underline">Zobacz, co obejmuje optymalizacja SEO <span aria-hidden="true">→</span></a>
     </aside>
   )
 }
@@ -439,7 +442,7 @@ const PYTANIA_GOOGLE = [
   ['Czy mogę sam poprawić pozycję firmy w Google?', 'Tak, w dużej części. Kroki 1–5 z tego poradnika zrobisz sam, bez wiedzy technicznej: Profil Firmy, zdjęcia, opinie i wpisy w katalogach. Kroki 6–8 to praca w kodzie strony.'],
   ['Po jakim czasie zobaczę efekty?', 'Według Google jedne zmiany widać po kilku godzinach, a inne dopiero po kilku miesiącach. Daj sobie kilka tygodni, zanim ocenisz wynik.'],
   ['Czy mogę dać klientowi rabat za opinię?', 'Nie. Zasady Map Google zabraniają płacenia za opinie i dawania za nie rabatów, prezentów ani darmowych usług. Takie opinie Google usuwa.'],
-  ['Ile kosztuje poprawa kodu strony pod Google?', <>U nas optymalizacja SEO kosztuje od 300 zł. W 16 cennikach polskich firm, które sprawdziliśmy 30 września 2026, środkowa cena SEO bez abonamentu to 1500 zł. Więcej liczb znajdziesz w poradniku <a href="/poradniki/ile-kosztuje-strona-internetowa">Ile kosztuje strona internetowa w 2026?</a></>],
+  ['Ile kosztuje poprawa kodu strony pod Google?', <>U nas optymalizacja SEO kosztuje od 300 zł. W 16 cennikach polskich firm, które sprawdziliśmy 30 września 2026, środkowa cena SEO bez abonamentu to 1500 zł. Sprawdź, <a href="/poradniki/ile-kosztuje-strona-internetowa#seo">ile kosztuje SEO i jak porównywać oferty</a>.</>],
   ['Moja strona ma kilka lat i w teście wypada na czerwono. Poprawiać czy zmienić?', <><strong>Wniosek:</strong> gdy strona jest stara, a test z kroku 6 pokazuje czerwone wyniki, często prościej jest ją przebudować, niż poprawiać po kawałku. Zobacz, jak wygląda <a href="/przebudowa-strony-internetowej">przebudowa strony internetowej</a>.</>],
 ]
 
