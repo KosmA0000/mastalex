@@ -5,9 +5,6 @@ import { Founders } from './shared.jsx'
 // Teksty przepisane 30.09.2026 (Claude, bez Codexa) po uwagach właściciela: mówimy, co robimy,
 // piszemy tylko o korzyściach klienta i każdy fakt podajemy na danej podstronie raz.
 
-const GOOGLE_DO_I_NEED_SEO = 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo?hl=pl'
-const GOOGLE_SEO_STARTER = 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=pl'
-
 function Body({ children, aside }) {
   return (
     <div className="mx-auto max-w-[1200px] px-4 sm:px-6 mt-10 grid lg:grid-cols-[1fr_320px] gap-12">
@@ -311,8 +308,7 @@ export function Seo() {
         <p>SEO (od angielskiego <i>search engine optimization</i>, czyli optymalizacja pod wyszukiwarki) to praca nad stroną, dzięki której Google pokazuje ją wyżej. Nazywa się ją też pozycjonowaniem strony.</p>
         <p>Strona bez SEO jest jak sklep na zapleczu budynku: może mieć świetną ofertę, ale mało kto do niego trafia. SEO przenosi go na główną ulicę, którą klienci przechodzą codziennie.</p>
         <p>Coraz więcej osób prosi też o polecenie firmy czaty AI, np. ChatGPT. SEO sprawia, że Twoja firma częściej pojawia się również w ich odpowiedziach.</p>
-        <p>Jeśli chcesz poczytać więcej, Google opisuje SEO w <a href={GOOGLE_SEO_STARTER} rel="noopener" target="_blank">poradniku dla początkujących</a> i wyjaśnia, <a href={GOOGLE_DO_I_NEED_SEO} rel="noopener" target="_blank">kiedy warto je zlecić</a>.</p>
-        <p>Od czego zacząć u siebie? W naszym poradniku wyjaśniamy, <a href="/poradniki/jak-byc-wyzej-w-google">jak poprawić widoczność firmy w Google krok po kroku</a>, także samodzielnie.</p>
+        <p>Chcesz wiedzieć, od czego zacząć? W poradniku Mastalex wyjaśniamy, <a href="/poradniki/jak-byc-wyzej-w-google">jak poprawić widoczność firmy w Google krok po kroku</a>. Pokazujemy, co możesz zrobić samodzielnie, a które działania warto zlecić.</p>
 
         <h2>Co wykonujemy w ramach usługi</h2>
         <Numbered items={SEO_WORK} />
